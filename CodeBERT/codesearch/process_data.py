@@ -16,6 +16,7 @@ def format_str(string):
     return string
 
 
+# define a method to convert
 def preprocess_test_data(language, test_batch_size=1000):
     path = os.path.join(DATA_DIR, '{}_test_0.jsonl.gz'.format(language))
     print(path)
@@ -53,6 +54,8 @@ def preprocess_test_data(language, test_batch_size=1000):
         print(file_path)
         with open(file_path, 'w', encoding='utf-8') as f:
             f.writelines('\n'.join(examples))
+
+
 
 if __name__ == '__main__':
     languages = ['go', 'php', 'python', 'java', 'javascript', 'ruby']
